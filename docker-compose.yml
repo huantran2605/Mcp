@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: mcp_db
+      MYSQL_USER: mcp_user
+      MYSQL_PASSWORD: mcp_password
+    volumes:
+      - mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+
+  mcp-app:
+    build:
+      context: .  # Assuming your Spring Boot project is in this directory
+      dockerfile: Dockerfile
+    container_name: mcp-app
+    depends_on:
+      - mysql
+      - ollama
+    image: huantran2605/mcp-app
+    ports:
+      - "8089:8080"  # Exposing the Spring Boot application port
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/mcp_db?useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: mcp_user
+      SPRING_DATASOURCE_PASSWORD: mcp_password
+      SPRING_PROFILES_ACTIVE: dev
+      SPRING_AI_OLLAMA_BASE_URL: http://ollama:11434
+
+volumes:
+  mysql-data:
+  ollama:

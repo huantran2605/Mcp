@@ -1,0 +1,29 @@
+spring:
+  main:
+    banner-mode: off
+    web-application-type: none
+
+  #  datasource:
+  #    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/mcp_demo?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+  #    username: ${SPRING_DATASOURCE_USERNAME:root}
+  #    password: ${SPRING_DATASOURCE_PASSWORD:root}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  ai:
+    mcp:
+      server:
+        name: mcp-server
+        stdio: true
+      client:
+        enabled: false
+
+logging:
+  pattern:
+    console: ""

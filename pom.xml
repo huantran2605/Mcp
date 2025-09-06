@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>mcp-demo</artifactId>
+    <artifactId>mcp-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>mcp-demo</name>
-    <description>mcp-demo project</description>
+    <description>mcp-app project</description>
     <properties>
         <java.version>17</java.version>
         <spring.boot.version>3.3.3</spring.boot.version>
@@ -66,7 +66,13 @@
         <!--        Spring AI: MCP Server-->
         <dependency>
             <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-starter-mcp-server-webmvc</artifactId>
+            <artifactId>spring-ai-starter-mcp-server</artifactId>
+        </dependency>
+
+        <!--        Spring AI: MCP Client-->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-mcp-client</artifactId>
         </dependency>
 
         <dependency>
