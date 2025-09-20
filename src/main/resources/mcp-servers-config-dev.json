@@ -5,7 +5,7 @@
       "args": [
         "-Dspring.profiles.active=mcp-server-dev",
         "-jar",
-        "./mcp-app-0.0.1-SNAPSHOT.jar"
+        "./chatbot-1.0.0.jar"
       ]
     }
   }

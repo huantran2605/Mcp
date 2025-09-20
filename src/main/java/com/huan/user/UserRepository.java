@@ -1,4 +1,4 @@
-package com.mcp.user;
+package com.huan.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

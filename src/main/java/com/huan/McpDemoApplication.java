@@ -1,4 +1,4 @@
-package com.mcp;
+package com.huan;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

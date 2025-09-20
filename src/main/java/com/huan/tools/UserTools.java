@@ -1,7 +1,7 @@
-package com.mcp.tools;
+package com.huan.tools;
 
-import com.mcp.user.User;
-import com.mcp.user.UserRepository;
+import com.huan.user.User;
+import com.huan.user.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;

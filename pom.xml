@@ -8,11 +8,11 @@
         <version>3.5.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>mcp-app</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>mcp-demo</name>
-    <description>mcp-app project</description>
+    <groupId>com.huan</groupId>
+    <artifactId>chatbot</artifactId>
+    <version>1.0.0</version>
+    <name>chatbot</name>
+    <description>chatbot project uses MCP</description>
     <properties>
         <java.version>17</java.version>
         <spring.boot.version>3.3.3</spring.boot.version>

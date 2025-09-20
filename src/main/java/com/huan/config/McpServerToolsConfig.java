@@ -1,6 +1,6 @@
-package com.mcp.config;
+package com.huan.config;
 
-import com.mcp.tools.UserTools;
+import com.huan.tools.UserTools;
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.ai.tool.method.MethodToolCallbackProvider;
 import org.springframework.context.annotation.Bean;
